@@ -1,4 +1,3 @@
-
 # 🍎 La Huerta Fresca
 
 > Sistema de e-commerce de frutas y verduras frescas desarrollado en PHP puro con almacenamiento en archivos de texto.
@@ -276,18 +275,12 @@ nuevo_usuario|hash_md5_generado
 
 ---
 
-## 🚧 Roadmap / Mejoras Futuras
+## 🔮 Posibles Mejoras Futuras
 
-- [ ] Migrar de archivos `.txt` a base de datos MySQL/PostgreSQL
-- [ ] Implementar sistema de pago (Stripe/PayPal)
-- [ ] Panel de administración avanzado
-- [ ] Sistema de búsqueda y filtros
-- [ ] Calificaciones y reseñas de productos
-- [ ] Sistema de envío con seguimiento
-- [ ] Notificaciones por email
-- [ ] API REST para móviles
-- [ ] Multi-idioma (i18n)
-- [ ] Dashboard con estadísticas
+- [ ] **Migración a base de datos** (MySQL/PostgreSQL)
+- [ ] **Sistema de registro** de nuevos usuarios
+- [ ] **Panel de administración avanzado**
+- [ ] **Buscador de productos** con filtros
 
 ---
 
@@ -302,80 +295,7 @@ nuevo_usuario|hash_md5_generado
 
 ---
 
-## 🤝 Contribuir
-
-Las contribuciones son bienvenidas! Por favor:
-
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add: nueva funcionalidad'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
-
-### Guía de Estilo
-
-- Usar PSR-12 para código PHP
-- Comentarios en español
-- Variables descriptivas en inglés
-- Indentación de 4 espacios
-
----
-
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
-
-```
-MIT License
-
-Copyright (c) 2025 La Huerta Fresca
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction...
-```
-
----
-
-## 👨‍💻 Autor
-
-**Tu Nombre**
-- GitHub: [@tu-usuario](https://github.com/tu-usuario)
-- LinkedIn: [Tu Perfil](https://linkedin.com/in/tu-perfil)
-- Email: tu.email@ejemplo.com
-
----
-
-## 🙏 Agradecimientos
-
-- [Bootstrap](https://getbootstrap.com/) por el framework CSS
-- [Bootstrap Icons](https://icons.getbootstrap.com/) por los iconos
-- Comunidad de PHP por la documentación
-
----
-
-## 📞 Soporte
-
-Si tienes alguna pregunta o problema:
-
-1. Revisa la sección de [Issues](https://github.com/tu-usuario/la-huerta-fresca/issues)
-2. Abre un nuevo issue si es necesario
-3. Contacta por email: soporte@lahuertafresca.com
-
----
-
-## 📊 Estadísticas del Proyecto
-
-![GitHub stars](https://img.shields.io/github/stars/tu-usuario/la-huerta-fresca?style=social)
-![GitHub forks](https://img.shields.io/github/forks/tu-usuario/la-huerta-fresca?style=social)
-![GitHub issues](https://img.shields.io/github/issues/tu-usuario/la-huerta-fresca)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/tu-usuario/la-huerta-fresca)
-
----
-
 <div align="center">
-
-**⭐ Si te gusta este proyecto, dale una estrella! ⭐**
 
 Hecho con ❤️ y 🍎 en 2025
 
