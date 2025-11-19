@@ -38,13 +38,13 @@ Contraseña: Pass2024secure
 ## 📸 Screenshots
 
 ### Página Principal
-![Home](https://via.placeholder.com/800x400/4CAF50/FFFFFF?text=Home+-+La+Huerta+Fresca)
+![Home](![alt text](/imagenes/image.png))
 
 ### Catálogo de Productos
-![Productos](https://via.placeholder.com/800x400/45a049/FFFFFF?text=Catálogo+de+Productos)
+![Productos](![alt text](/imagenes/productos.png))
 
 ### Carrito de Compras
-![Carrito](https://via.placeholder.com/800x400/388e3c/FFFFFF?text=Carrito+de+Compras)
+![Carrito](![alt text](/imagenes/carrito.png))
 
 ---
 
@@ -294,9 +294,3 @@ nuevo_usuario|hash_md5_generado
 | Archivos .txt no escalables | Migrar a base de datos |
 
 ---
-
-<div align="center">
-
-Hecho con ❤️ y 🍎 en 2025
-
-</div>
