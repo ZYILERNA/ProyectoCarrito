@@ -1,0 +1,382 @@
+
+# 🍎 La Huerta Fresca
+
+> Sistema de e-commerce de frutas y verduras frescas desarrollado en PHP puro con almacenamiento en archivos de texto.
+
+![PHP](https://img.shields.io/badge/PHP-7.4+-777BB4?style=flat&logo=php&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.2-7952B3?style=flat&logo=bootstrap&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+
+---
+
+## 📋 Descripción
+
+**La Huerta Fresca** es una aplicación web de comercio electrónico especializada en la venta de productos frescos del campo. Desarrollada completamente en PHP vanilla sin frameworks ni bases de datos, utiliza un sistema de archivos `.txt` para el almacenamiento de datos.
+
+### ✨ Características Principales
+
+- 🔐 **Sistema de autenticación** con sesiones y cookies personalizadas
+- 🛒 **Carrito de compras personalizado** por usuario
+- 📦 **Gestión de productos** (CRUD completo)
+- 🎨 **Interfaz moderna** con Bootstrap 5 y diseño responsivo
+- 🕒 **Historial de productos vistos** recientemente
+- 🎨 **Temas personalizados** por usuario con cookies temporales
+- 📊 **Agrupación inteligente** de productos en el carrito
+
+---
+
+## 🚀 Demo
+
+```
+Usuario: usuario1
+Contraseña: Pass2024secure
+```
+
+[Ver más usuarios disponibles](#-usuarios-de-prueba)
+
+---
+
+## 📸 Screenshots
+
+### Página Principal
+![Home](https://via.placeholder.com/800x400/4CAF50/FFFFFF?text=Home+-+La+Huerta+Fresca)
+
+### Catálogo de Productos
+![Productos](https://via.placeholder.com/800x400/45a049/FFFFFF?text=Catálogo+de+Productos)
+
+### Carrito de Compras
+![Carrito](https://via.placeholder.com/800x400/388e3c/FFFFFF?text=Carrito+de+Compras)
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+| Tecnología | Versión | Uso |
+|------------|---------|-----|
+| **PHP** | 7.4+ | Backend y lógica de negocio |
+| **Bootstrap** | 5.3.2 | Framework CSS |
+| **Bootstrap Icons** | 1.11.1 | Iconografía |
+| **HTML5** | - | Estructura |
+| **CSS3** | - | Estilos personalizados |
+| **JavaScript** | Vanilla | Interactividad |
+
+---
+
+## 📁 Estructura del Proyecto
+
+```
+la-huerta-fresca/
+│
+├── componentes/           # Páginas principales
+│   ├── index.php         # Página de inicio
+│   ├── login.php         # Página de login
+│   ├── productos.php     # Catálogo de productos
+│   ├── carrito.php       # Carrito de compras
+│   ├── reciente.php      # Productos vistos recientemente
+│   └── formulario.php    # Formulario crear producto
+│
+├── procedimientos/        # Lógica de procesamiento
+│   ├── login.proc.php    # Autenticación
+│   ├── logout.proc.php   # Cierre de sesión
+│   ├── carrito.proc.php  # Añadir al carrito
+│   └── crear_producto.proc.php
+│
+├── funciones/             # Funciones auxiliares
+│   └── eliminar.php      # Eliminar del carrito
+│
+├── include/               # Componentes reutilizables
+│   ├── hlogin.html       # Header sin sesión
+│   ├── hlogout.html      # Header con sesión
+│   ├── footer.html       # Footer
+│   └── color_fondo.php   # Sistema de temas
+│
+├── productos/             # Almacenamiento de datos
+│   ├── productos.txt     # Lista de productos
+│   ├── sresu.txt         # Usuarios (hash MD5)
+│   ├── carrito_*.txt     # Carritos por usuario
+│   └── reciente_*.txt    # Historial por usuario
+│
+└── imagenes/              # Recursos gráficos
+    ├── manzana.jpg
+    ├── platano.jpg
+    └── ...
+```
+
+---
+
+## ⚙️ Instalación
+
+### Requisitos Previos
+
+- PHP 7.4 o superior
+- Servidor web (Apache/Nginx)
+- XAMPP, WAMP, MAMP o similar (para desarrollo local)
+
+### Pasos de Instalación
+
+1. **Clonar el repositorio**
+   ```bash
+   git clone https://github.com/tu-usuario/la-huerta-fresca.git
+   cd la-huerta-fresca
+   ```
+
+2. **Configurar el servidor**
+   - Copiar la carpeta al directorio `htdocs` (XAMPP) o `www` (WAMP)
+   - O usar el servidor integrado de PHP:
+   ```bash
+   php -S localhost:8000 -t componentes/
+   ```
+
+3. **Configurar permisos** (Linux/Mac)
+   ```bash
+   chmod 755 componentes/ procedimientos/ funciones/
+   chmod 777 productos/
+   chmod 644 productos/*.txt
+   ```
+
+4. **Acceder a la aplicación**
+   ```
+   http://localhost/la-huerta-fresca/componentes/index.php
+   # O si usas el servidor integrado:
+   http://localhost:8000/index.php
+   ```
+
+---
+
+## 👥 Usuarios de Prueba
+
+| Usuario | Contraseña | Color de Tema |
+|---------|-----------|---------------|
+| `usuario1` | `Pass2024secure` | Rosa claro |
+| `usuario2` | `Marte789Quick` | Azul claro |
+| `usuario3` | `Ocean456Blue` | Verde claro |
+| `usuario4` | `Tiger2024Strong` | Naranja claro |
+| `usuario5` | `Phoenix321Fire` | Púrpura claro |
+| `usuario6` | `Dragon654Power` | Amarillo claro |
+
+---
+
+## 🎯 Funcionalidades Detalladas
+
+### 1. Sistema de Autenticación
+- Login con usuario y contraseña (hash MD5)
+- Gestión de sesiones PHP
+- Cookies personalizadas con expiración de 30 segundos
+- Tema de color único por usuario
+
+### 2. Gestión de Productos
+- **Ver catálogo** con diseño tipo tarjetas
+- **Crear nuevos productos** mediante formulario
+- **Añadir al carrito** con un clic
+- **Stock disponible** mostrado en tiempo real
+
+### 3. Carrito de Compras
+- **Carrito personalizado** por usuario (archivo independiente)
+- **Agrupación automática** de productos repetidos
+- **Contador de cantidad** por producto
+- **Eliminación selectiva** de productos
+- **Cálculo de total** en tiempo real
+- **Resumen del pedido** con detalles
+
+### 4. Historial de Vistos
+- Registro automático de productos consultados
+- Vista sin duplicados
+- Almacenamiento por usuario
+
+### 5. Diseño Responsivo
+- Adaptable a móviles, tablets y escritorio
+- Animaciones suaves (hover effects)
+- Gradientes modernos
+- Iconografía intuitiva
+
+---
+
+## 🔒 Seguridad
+
+### Implementaciones de Seguridad
+
+- ✅ Contraseñas hasheadas con MD5 (⚠️ **Nota:** En producción usar `password_hash()`)
+- ✅ Validación de sesiones activas
+- ✅ Sanitización con `htmlspecialchars()`
+- ✅ Protección contra inyección de rutas
+- ✅ Validación de entrada de formularios
+
+### ⚠️ Recomendaciones para Producción
+
+```php
+// Cambiar de MD5 a:
+$hash = password_hash($password, PASSWORD_BCRYPT);
+$verify = password_verify($password, $hash);
+
+// Añadir protección CSRF
+// Usar PDO/MySQLi en lugar de archivos .txt
+// Implementar validación del lado del servidor más robusta
+```
+
+---
+
+## 📝 Sistema de Archivos
+
+### Formato de Datos
+
+**productos.txt**
+```
+Nombre|Precio|Stock|Descripción|Imagen
+```
+
+**Ejemplo:**
+```
+Manzana|1.50|10|Manzanas rojas de la casa de juan|../imagenes/manzana.jpg
+Platano|0.75|20|Platanos amarillos de la casa de pepe|../imagenes/platano.jpg
+```
+
+**sresu.txt** (Usuarios)
+```
+usuario|hash_md5_password
+```
+
+**carrito_usuario1.txt** (Carrito personal)
+```
+Nombre|Precio|Stock|Descripción|Imagen
+```
+
+---
+
+## 🎨 Personalización
+
+### Cambiar Colores del Tema
+
+Editar en `procedimientos/login.proc.php`:
+
+```php
+$colores_usuarios = [
+    'usuario1' => '#TU_COLOR_AQUI',
+    // ...
+];
+```
+
+### Cambiar Duración de Cookies
+
+```php
+// En login.proc.php
+setcookie('color_fondo', $color_usuario, time() + 86400, '/'); // 24 horas
+```
+
+### Agregar Nuevos Usuarios
+
+1. Generar hash MD5:
+```php
+echo md5('tu_contraseña');
+```
+
+2. Añadir al archivo `productos/sresu.txt`:
+```
+nuevo_usuario|hash_md5_generado
+```
+
+---
+
+## 🚧 Roadmap / Mejoras Futuras
+
+- [ ] Migrar de archivos `.txt` a base de datos MySQL/PostgreSQL
+- [ ] Implementar sistema de pago (Stripe/PayPal)
+- [ ] Panel de administración avanzado
+- [ ] Sistema de búsqueda y filtros
+- [ ] Calificaciones y reseñas de productos
+- [ ] Sistema de envío con seguimiento
+- [ ] Notificaciones por email
+- [ ] API REST para móviles
+- [ ] Multi-idioma (i18n)
+- [ ] Dashboard con estadísticas
+
+---
+
+## 🐛 Problemas Conocidos
+
+| Problema | Solución Temporal |
+|----------|-------------------|
+| Cookies expiran muy rápido (30s) | Aumentar tiempo en `login.proc.php` |
+| MD5 no es seguro | Usar `password_hash()` en producción |
+| Sin validación de stock | Implementar verificación antes de añadir |
+| Archivos .txt no escalables | Migrar a base de datos |
+
+---
+
+## 🤝 Contribuir
+
+Las contribuciones son bienvenidas! Por favor:
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add: nueva funcionalidad'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+### Guía de Estilo
+
+- Usar PSR-12 para código PHP
+- Comentarios en español
+- Variables descriptivas en inglés
+- Indentación de 4 espacios
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+
+```
+MIT License
+
+Copyright (c) 2025 La Huerta Fresca
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction...
+```
+
+---
+
+## 👨‍💻 Autor
+
+**Tu Nombre**
+- GitHub: [@tu-usuario](https://github.com/tu-usuario)
+- LinkedIn: [Tu Perfil](https://linkedin.com/in/tu-perfil)
+- Email: tu.email@ejemplo.com
+
+---
+
+## 🙏 Agradecimientos
+
+- [Bootstrap](https://getbootstrap.com/) por el framework CSS
+- [Bootstrap Icons](https://icons.getbootstrap.com/) por los iconos
+- Comunidad de PHP por la documentación
+
+---
+
+## 📞 Soporte
+
+Si tienes alguna pregunta o problema:
+
+1. Revisa la sección de [Issues](https://github.com/tu-usuario/la-huerta-fresca/issues)
+2. Abre un nuevo issue si es necesario
+3. Contacta por email: soporte@lahuertafresca.com
+
+---
+
+## 📊 Estadísticas del Proyecto
+
+![GitHub stars](https://img.shields.io/github/stars/tu-usuario/la-huerta-fresca?style=social)
+![GitHub forks](https://img.shields.io/github/forks/tu-usuario/la-huerta-fresca?style=social)
+![GitHub issues](https://img.shields.io/github/issues/tu-usuario/la-huerta-fresca)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/tu-usuario/la-huerta-fresca)
+
+---
+
+<div align="center">
+
+**⭐ Si te gusta este proyecto, dale una estrella! ⭐**
+
+Hecho con ❤️ y 🍎 en 2025
+
+</div>
